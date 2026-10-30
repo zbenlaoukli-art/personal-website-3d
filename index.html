@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zakaria Benlaoukli — Web Developer</title>
+  <meta name="description" content="Freelance web developer building fast, responsive and creative websites.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 3D planet renders here -->
+  <div id="space" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a href="#intro" class="logo">Zakaria Benlaoukli</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#intro">Intro</a>
+      <a href="#build">Services</a>
+      <a href="#work">Portfolio</a>
+      <a href="#about">About</a>
+    </nav>
+    <button type="button" class="btn btn-small" data-contact>Start a project</button>
+  </header>
+
+  <main>
+
+    <!-- 1. INTRO -->
+    <section class="panel hero" id="intro">
+      <p class="status"><span class="dot"></span>Available for new projects</p>
+      <h1>Hi, I’m Zakaria.<br>I build websites that feel like another world.</h1>
+      <p class="lead">
+        I’m a freelance web developer from Algeria. I design and code fast,
+        responsive websites for businesses and creators who want to stand out.
+      </p>
+      <div class="actions">
+        <a href="#work" class="btn btn-primary">See my work</a>
+        <a href="#build" class="btn btn-ghost">Work with me</a>
+      </div>
+    </section>
+
+    <!-- 2. LET'S BUILD SOMETHING -->
+    <section class="panel" id="build">
+      <h2>Let’s build something.</h2>
+      <p class="lead">Tell me what you need. I’ll handle the design, the code and the launch.</p>
+
+      <div class="services">
+        <div>
+          <h3>Business websites</h3>
+          <p>Clear, fast sites that explain what you do and bring in customers.</p>
+        </div>
+        <div>
+          <h3>Portfolios and landing pages</h3>
+          <p>One-page sites that show your work and make people get in touch.</p>
+        </div>
+        <div>
+          <h3>3D and interactive experiences</h3>
+          <p>Animated, memorable pages built with JavaScript and Three.js.</p>
+        </div>
+      </div>
+
+      <button type="button" class="btn btn-primary" data-contact>Message me about your project</button>
+    </section>
+
+    <!-- 3. PORTFOLIO -->
+    <section class="panel" id="work">
+      <h2>Portfolio</h2>
+      <p class="lead">A few websites I’ve built. Open any of them to explore.</p>
+
+      
+      </article>
+
+      <!-- Copy the <article class="project"> block above for each new project -->
+      <div class="project next">
+        <h3>More projects coming soon</h3>
+        <p>New work is added here as soon as it ships.</p>
+      </div>
+    </section>
+
+    <!-- 4. ABOUT ME -->
+    <section class="panel" id="about">
+      <h2>About me</h2>
+      <div class="about-grid">
+        <p class="big">I believe a website should feel like stepping into something new.</p>
+        <div>
+          <p>
+            I’m Zakaria Benlaoukli, a freelance web developer based in Algeria.
+            I build modern, responsive websites that look sharp on every screen and load quickly.
+          </p>
+          <p>
+            I combine clean code, thoughtful design and creative interaction, so your site
+            does more than exist. It gets remembered.
+          </p>
+          <ul class="tags">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Three.js</li>
+            <li>Responsive design</li>
+          </ul>
+          <button type="button" class="btn btn-primary" data-contact>Get in touch</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <span>© 2026 Zakaria Benlaoukli</span>
+    <a href="#intro">Back to top</a>
+  </footer>
+
+  <!-- Contact form: messages are sent to zbenlaoukli@gmail.com -->
+  <dialog id="contact-dialog" class="dialog" aria-labelledby="contact-title">
+    <form id="contact-form">
+      <div class="dialog-head">
+        <h2 id="contact-title">Send me a message</h2>
+        <button type="button" class="dialog-close" data-close aria-label="Close">&times;</button>
+      </div>
+      <p class="dialog-note">Tell me about your project. I’ll reply by email.</p>
+
+      <label>Your name
+        <input type="text" name="name" required autocomplete="name">
+      </label>
+      <label>Your email
+        <input type="email" name="email" required autocomplete="email">
+      </label>
+      <label>Message
+        <textarea name="message" rows="5" required></textarea>
+      </label>
+      <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="honey" aria-hidden="true">
+
+      <button type="submit" class="btn btn-primary">Send message</button>
+      <p id="contact-status" role="status" aria-live="polite"></p>
+    </form>
+  </dialog>
+
+  <!-- Classic scripts: works even when index.html is opened by double-click -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.149.0/build/three.min.js"></script>
+  <script src="script.js"></script>
+  <script src="contact.js"></script>
+</body>
+</html>
